@@ -13,16 +13,7 @@ function main() {
     configurator.register('file', FileProvider);
     configurator.register('env', EnvProvider);
 
-    configurator.use('literal', {Hello: 'World'});
-    configurator.use('cli');
-    configurator.use('file', {fromConfig: 'file', skipMissing: true});
-    configurator.use('env', {match: /compute.name/, lowerCase: true});
-
-    configurator.build().then(function(config) {
-        console.log(config);
-    }).catch(function(err) {
-        console.error(err.stack);
-    });
+    return configurator;
 }
 
-main();
+module.exports = main();
