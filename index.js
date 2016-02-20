@@ -8,6 +8,8 @@ const Configurator = require('./lib/configurator');
 
 function main() {
     let configurator = new Configurator();
+
+    // Register all of the builtin providers
     configurator.register('literal', LiteralProvider);
     configurator.register('cli', CliProvider);
     configurator.register('file', FileProvider);
