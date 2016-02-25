@@ -104,10 +104,11 @@ Configurator.use('literal', {numberOfMonsters: 10});
 ### FileProvider
 
 Registered under `file`, this provider parses a JSON file and merges it with
-the current config. It either takes a path to the file, or an options object
-that can have the following properties:
+the current config. If the file it's given is a direcotry, it will read all of
+the files in that directory and merge them together. It either takes a path to
+the file, or an options object that can have the following properties:
 
-- `file`: The path to the file to ready
+- `file`: The path to the file/directory to read
 - `fromConfig`: Get the file path from this value of the already built config.
 If both `file` and `fromConfig` are given, `fromConfig` is used
 - `skipErrors`: Silently ignore any errors that occur parsing the JSON file.
