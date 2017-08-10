@@ -10,6 +10,6 @@ test('env', async t => {
     Configurator.use('env');
     const config = await Configurator.build();
 
-    t.same(config.HELLO, 'World');
-    t.same(config.CHICKEN, 'Nugget');
+    t.deepEqual(config.HELLO, 'World');
+    t.deepEqual(config.CHICKEN, 'Nugget');
 });

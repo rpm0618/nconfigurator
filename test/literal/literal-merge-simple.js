@@ -25,5 +25,5 @@ test('literal-merge-simple', async t => {
 
     const config = await Configurator.build();
 
-    t.same(expected, config);
+    t.deepEqual(expected, config);
 });

@@ -18,5 +18,5 @@ test('file', async t => {
     Configurator.use('file', path.join(__dirname, 'data/test.json'));
     const config = await Configurator.build();
 
-    t.same(expected, config);
+    t.deepEqual(expected, config);
 });

@@ -19,5 +19,5 @@ test('literal', async t => {
     Configurator.use('literal', literal);
     const config = await Configurator.build();
 
-    t.same(literal, config);
+    t.deepEqual(literal, config);
 });

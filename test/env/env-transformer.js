@@ -17,5 +17,5 @@ test('env-transformer', async t => {
 
     const config = await Configurator.build();
 
-    t.same(config.HELLO.WORLD, '123')
+    t.deepEqual(config.HELLO.WORLD, '123')
 })

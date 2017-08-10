@@ -21,5 +21,5 @@ test('file', async t => {
     Configurator.use('file', {fromConfig: 'fileToUse'});
     const config = await Configurator.build();
 
-    t.same(expected, config);
+    t.deepEqual(expected, config);
 })
